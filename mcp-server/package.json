@@ -1,0 +1,14 @@
+{
+  "name": "rajsocial-ai-mcp-server",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Private MCP tools for the RajSocial AI content queue; no social-platform publishing.",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^5.1.0",
+    "zod": "^3.25.0"
+  }
+}
