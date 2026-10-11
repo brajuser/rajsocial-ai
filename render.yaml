@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: rajsocial-ai-mcp
+    runtime: node
+    plan: starter
+    rootDir: mcp-server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    disk:
+      name: rajsocial-ai-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: HOST
+        value: 0.0.0.0
+      - key: RAJSOCIAL_DATA_FILE
+        value: /var/data/data.json
+      - key: MCP_BEARER_TOKEN
+        generateValue: true
